@@ -1,5 +1,10 @@
 {
+	"write-good.write-good-config": {
+		"weasel-words": false
+	},
 	"cSpell.words": [
+		"p",
+		"rolice",
 		"workstreams"
 	]
 }
