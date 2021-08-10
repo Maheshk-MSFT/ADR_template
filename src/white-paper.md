@@ -60,10 +60,10 @@ Our working agreement defined HOW we worked together and comprised of 5 main sec
 Often these norms or practices are not written down. Eliminating assumptions makes working together more frictionless.
 Communication norms contained items like:
 
-* core working hours for the project - our team spread across 4 time zones
+* WHEN core working hours for the project - our team spread across 4 time zones
 * WHERE our communications happen (Teams - not email, channels - not chat)
 * WHAT our communication was (async, meetings should begin / end on time, should contain an agenda)
-* User stories broken down to small tasks, keeping pull requests small and manageably-sized
+* HOW User stories broken down to small tasks, keeping pull requests small and manageably-sized
 
 ### PRolice
 
