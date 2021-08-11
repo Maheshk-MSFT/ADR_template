@@ -14,9 +14,33 @@ In a 2020 paper published by McKinsey on the importance of Developer Velocity, i
 (TODO: Talk about the team on both sides)
 (TODO: Talk about the challenges from a project management perspective)
 
+[XP](https://www.xpi.com.br/quem-somos/) is a financial services company located in Brazil. According to their "about us" page, their purpose is to "transform the financial market to improve people's lives."
+
+[Microsoft](https://www.microsoft.com/) is a global software company whose mission is to "empower every person and organization on the planet to achieve more."
+
+In Spring 2021, XP and Microsoft created a joint team to co-develop the beginnings of the next generation of XP's data platform. The Microsoft engagement period was limited to 8 weeks of scope so this specific team could not feasibly implement the entire data platform end-to-end in the time alloted. XP is running Generation 2 of their data platform and wished to implement an improved data platform for their main consumers: the data engineering team.
+
+The goal of the next generation data platform is to provide a centralized platform that has:
+
+1. Data Catalog
+2. Monitoring / Observability
+3. Alerts
+4. Logging
+5. Discoverability
+6. Workflow Management
+7. Self-Service
+
 ## Best Practices
 
+We used the following best practices during the 8 week engagement. In combination, these best practices created a project team that had high velocity, morale, agility; and despite time zone differences and language barriers, we produced what set out to accomplish.
+
+(TODO: could probably use more setup here.)
+
 ### MonoRepo
+
+Our team decided on using a [monorepo](https://en.wikipedia.org/wiki/Monorepo) for development. We found this efficient as we were able to navigate between projects and view patterns / documentation. It improved collaboration between the workstreams.
+
+(TODO: can someone add more here? I'm grasping at straws.)
 
 ### Code-With
 
@@ -38,6 +62,8 @@ One issue we discovered with the workstreams during a sprint retrospective, was 
 i.e. [API] Learned this cool thing about Helm charts!
 
 ### End of Sprint Demos
+
+We scheduled weekly sprint demos to showcase our work to each other (the different workstreams) but also to stakeholders outside of the project team. The XP cloud team and management attended demos when they could and also we recorded them all for anyone to view at their own convenience. We time-boxed our demo meetings to 30 minutes long and with 4 workstreams, alloted 7 minutes per workstream demo. 
 
 ### Informed Captain
 
