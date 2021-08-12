@@ -4,7 +4,7 @@ We (`Team A` and the `Team B`) will be working together for the successful imple
 
 ## Principle 1: We work towards a common goal and clear scope
 
-`Define the scope of work, Team A and Team B must be aigned with it`
+`Define the scope of work, Team A and Team B must be aligned with it`
 
 We work as a team, there are no separate `Team A` or `Team B` specific goals, we succeed or fail together. Our work allocation will be driven by the Sprint planning process, story breakdown into tasks, and the assignment will be done by the team assigning tasks to themselves.
 
