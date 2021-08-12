@@ -87,7 +87,7 @@ Our working agreement defined HOW we worked together and comprised of 5 main sec
 
 * Collaboration
 * Communication norms
-* Code management (link to our contributing.md)
+* Code management [contributing guidelines](./CONTRIBUTING.md)
 * Definition of done
 * Norms for reviewing and submitting pull requests
 
