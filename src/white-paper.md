@@ -2,7 +2,15 @@
 
 ## Introduction
 
-In a 2020 paper published by McKinsey on the importance of Developer Velocity, it stated that...(TODO: Set the stage to talk to highlight the importance of Developer Velocity.)
+In a 2020 paper published by McKinsey on the importance of Developer Velocity, it stated that companies with top `Developer Velocity Index (DVI)` outperform the market with 4-5 times revenue grow and 55% higher innovation (`Measured by level of adoption of new technologies and ability to innovate faster and beat competition through innovation led growth`)
+
+### What is Developer Velocity?
+
+The research conducted by McKinsey["Developer Velocity" by McKinsey] defined Developer Velocity as the ability to drive transformative business performance through software development. This is achieved by empowering developers, creating the right environment for them to innovate, and removing points of friction.
+
+After interviewing 440 large enterprises and more than 100 experts the researchers created the `Developer Velocity Index (DVI)`, which pinpoints the most critical factors (related to technology, working practices, and organizational enablement) in achieving Developer Velocity.
+
+(TODO: Set the stage to talk to highlight the importance of Developer Velocity.)
 
 (TODO: Connect collaboration and velocity acceleration)
 
@@ -79,7 +87,7 @@ Our working agreement defined HOW we worked together and comprised of 5 main sec
 
 * Collaboration
 * Communication norms
-* Code management (link to our contributing.md)
+* Code management [contributing guidelines](./CONTRIBUTING.md)
 * Definition of done
 * Norms for reviewing and submitting pull requests
 
@@ -120,3 +128,4 @@ Benefits of this practice are:
 ## References
 
 * ["Developer Velocity" by McKinsey](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance)
+* [Work Agreement Template](./work-agreement-template.md)
