@@ -128,3 +128,4 @@ Benefits of this practice are:
 ## References
 
 * ["Developer Velocity" by McKinsey](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance)
+* [Work Agreement Template](./work-agreement-template.md)
