@@ -44,6 +44,19 @@ We used the following best practices during the 8 week engagement. In combinatio
 
 (TODO: could probably use more setup here.)
 
+### Ideation & Envisioning
+(TODO: What is the solution we plan to build?)
+
+
+### Architecture Desing Sessions (ADS)
+An important question to be addressed is: How are we going to build the solution? A good approach is run Architecture Design Sessions in order to track components and map what is need to build. An Architecture Design Session (ADS) is a custom session that focuses on the organization business objectives and aligns them with specific technology, applications or services (i.e., Microsoft Azure, Blockchain, IoT, etc.) to help the organization not only meet their goals, but also capitalize on them. In other words, an ADS is driven by clearly defined objectives and problem statements.
+
+Some artifacts that can be generated after sessions are Architectural Decision Records (ADRs). Write an ADR is a good way to captures and registered the architectural decisions made along with its context and consequences. Some companies tracks theis architectural decisions in some plataform like Confluence or other wiki content management system, in order to recieve comments and feedback until be implemented. 
+
+If any wiki content management system is not available, a good approach is to add to the repository as a [Markdown Architectural Decision Records](https://adr.github.io/madr). This approach is known as Lightweight Architecture Decision Records which is recommended to store all details in source control. To publish some plugins can be used like [Log4brains](https://github.com/thomvaill/log4brains). It enables you to log Architecture Decision Records (ADR) right from your IDE and to publish them automatically as a static website.
+
+Xp & Microsoft registered all ADRs in Confluence -- tool used in Xp for sharing techincal content -- following this [template](./adr-template.md)
+
 ### MonoRepo
 
 Our team decided on using a [monorepo](https://en.wikipedia.org/wiki/Monorepo) for development. We found this efficient as we were able to navigate between projects and view patterns / documentation. It improved collaboration between the workstreams.
@@ -129,3 +142,5 @@ Benefits of this practice are:
 
 * ["Developer Velocity" by McKinsey](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance)
 * [Work Agreement Template](./work-agreement-template.md)
+* [Architecture Design Sessions](https://www.linkedin.com/pulse/architecture-design-session-ads-vs-business-ideation-junco-boquer/)
+* [Lightweight Architecture Decision Records](https://www.thoughtworks.com/pt/radar/techniques/lightweight-architecture-decision-records)
