@@ -1,14 +1,18 @@
 {
 	"write-good.write-good-config": {
-		"weasel-words": false
+		"weasel": false,
+		"tooWordy": false,
+		"passive": false,
+		"adverb": false
 	},
 	"cSpell.words": [
 		"Discoverability",
-		"XP's",
 		"p",
 		"rolice",
+		"timeframe",
 		"transformative",
 		"workstream",
-		"workstreams"
+		"workstreams",
+		"XP's"
 	]
 }

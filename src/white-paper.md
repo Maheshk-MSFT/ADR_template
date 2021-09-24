@@ -1,34 +1,23 @@
-# (Title)
+# Improving Developer Velocity - a Case Study
 
 ## Introduction
 
-In a 2020 paper published by McKinsey on the importance of Developer Velocity, it stated that companies with top `Developer Velocity Index (DVI)` outperform the market with 4-5 times revenue grow and 55% higher innovation (`Measured by level of adoption of new technologies and ability to innovate faster and beat competition through innovation led growth`)
+In a 2020 paper published by McKinsey titled *Developer Velocity: How software
+excellence fuels business performance*, it stated that companies with top "Developer Velocity Index (DVI)" outperform the market with 4-5 times revenue grow and 55% higher innovation ("Measured by level of adoption of new technologies and ability to innovate faster and beat competition through innovation led growth"). To learn more about Developer Velocity, you can [download a copy of the white paper at this Azure page](https://azure.microsoft.com/en-us/overview/developer-velocity).
 
-### What is Developer Velocity?
+From the McKinsey paper, Developer Velocity is defined as the ability to drive transformative business performance through software development. Empowering developers, creating the right environment to innovate, and removing points of friction can all contribute to a high Developer Velocity.
 
-The research conducted by McKinsey["Developer Velocity" by McKinsey] defined Developer Velocity as the ability to drive transformative business performance through software development. This is achieved by empowering developers, creating the right environment for them to innovate, and removing points of friction.
+The goal of this white paper is highlight some best practices that could help an organization to achieve these high-level ideal organizational states. The best practices in this paper is more focused on communication and collaboration best practices in an Software Engineering Team. We will use the engagement between Microsoft and XP Investments as a case study and demonstrate on how we used these best practices to improve developer velocity.
 
-After interviewing 440 large enterprises and more than 100 experts the researchers created the `Developer Velocity Index (DVI)`, which pinpoints the most critical factors (related to technology, working practices, and organizational enablement) in achieving Developer Velocity.
-
-(TODO: Set the stage to talk to highlight the importance of Developer Velocity.)
-
-(TODO: Connect collaboration and velocity acceleration)
-
-(TODO: Set up the transition to background by stating that the paper will use the XP-DevSquad engagement as a case study for rapid development, despite it being a brand new team, and working across timezones)
-
-## Background
-
-(TODO: Talk about XP and the goal to create a Data Platform)
-(TODO: Talk about the team on both sides)
-(TODO: Talk about the challenges from a project management perspective)
+## Engagement Background and Challenges
 
 [XP](https://www.xpi.com.br/quem-somos/) is a financial services company located in Brazil. According to their "about us" page, their purpose is to "transform the financial market to improve people's lives."
 
 [Microsoft](https://www.microsoft.com/) is a global software company whose mission is to "empower every person and organization on the planet to achieve more."
 
-In Spring 2021, XP and Microsoft created a joint team to co-develop the beginnings of the next generation of XP's data platform. The Microsoft engagement period was limited to 8 weeks of scope so this specific team could not feasibly implement the entire data platform end-to-end in the time alloted. XP is running Generation 2 of their data platform and wished to implement an improved data platform for their main consumers: the data engineering team.
+In Spring 2021, XP and Microsoft started an engagement with engineers from both companies to co-develop the foundation of the next generation of XP's data platform.
 
-The goal of the next generation data platform is to provide a centralized platform that has:
+The goal of this data platform is to provide a centralized platform that has:
 
 1. Data Catalog
 2. Monitoring / Observability
@@ -38,34 +27,62 @@ The goal of the next generation data platform is to provide a centralized platfo
 6. Workflow Management
 7. Self-Service
 
+Not only are the engineers from the two companies never worked with one another before this engagement, the teams within the respective companies are also relatively new. This presented challenges are how to foster a culture of collaboration and healthy communication. The team was also geo-distributed. Engineers from Microsoft were primarily located various parts in the US and XP engineers were located in Brazil. The team needed to adapt and effectively collaborate across different timezones.
+
+This project was limited to 8 weeks. This meant the team needed to design, scope and execute within that timeframe. Given this timeframe, the scope needed to be reasonable but still needed to implement a demonstrable product that has a high ROI in terms of impact to future development.
+
+## Core Principles
+
+Here are the core principles that are at the root of the best practices utilized in this engagement:
+
+* **Build Trust**: Trust is at the center of how we worked with one another. There are assumptions about trust that is central in our day-to-day work: Trust that developers will raise any blockers or issues that arise. Trust that leads will be transparent about risks and manage external distractions. Trust that colleagues have the project's and other colleagues' best interest at heart. Some of the best practices outlined fosters trust in one another.
+* **Provide Context over Control**: [One of the core tenants on Netflix's Culture Page](https://jobs.netflix.com/culture#context-not-control), Context over Control is about providing the team with as much context as possible so that the team can achieve autonomy and self-direction.
+* **Aim for Clarity over Consensus**: It is better to have clarity on the situation or challenge, and understand the tradeoffs between options than to strive for agreements amongst the team without having clarity on the whole picture.
+* **Validate Early and Fail Fast**: An invalidated hypotheses is as important as a validated one. It's advantageous to prioritize the risks in the early part of the project; this allows more time to pivot.
+* **Strive for Depth**: Understanding the foundations is essential for a team to stay flexible and agile. It allows us to make better decisions. And understanding the motivations behind the tools, languages, and frameworks we use allows us to choose the right ones for the job.
+
 ## Best Practices
 
-We used the following best practices during the 8 week engagement. In combination, these best practices created a project team that had high velocity, morale, agility; and despite time zone differences and language barriers, we produced what set out to accomplish.
+We used the following best practices during the 8 week engagement. In combination, these best practices created a highly-functional project team. Despite time zone differences and language barriers, the team accomplished what was scoped and maintained high morale and strong sense of team.
 
-(TODO: could probably use more setup here.)
+### Envision Together
 
-### Ideation & Envisioning
-(TODO: What is the solution we plan to build?)
+Forming a vision together allows the everyone on the team to have a shared ownership of the end-product. However collectively shaping a vision is often a messy and long process. XP used a methodology called [Lean Inception](https://martinfowler.com/articles/lean-inception/) to provide a structure for this process. Lean Inception facilitates the process by providing discussion goals and milestones. The result of this process is a shared vision of a solution that everyone is excited about.
 
+### Architecture Design Sessions (ADS) and Records (ADR)
 
-### Architecture Desing Sessions (ADS)
-An important question to be addressed is: How are we going to build the solution? A good approach is run Architecture Design Sessions in order to track components and map what is need to build. An Architecture Design Session (ADS) is a custom session that focuses on the organization business objectives and aligns them with specific technology, applications or services (i.e., Microsoft Azure, Blockchain, IoT, etc.) to help the organization not only meet their goals, but also capitalize on them. In other words, an ADS is driven by clearly defined objectives and problem statements.
+Architecture Design Sessions (ADS) are designed to guide the participants through a series of design discussions. During the design sessions, participants can break into smaller groups to answer certain architecture questions and conduct investigations on the viability of certain ideas. These groups can then make recommendations on certain approaches. At the end of the ADS, the result is a detailed architecture diagram that specifies the initial design of the architecture. Accompanying the architecture diagram should be a collection of [Architecture Decision Records](https://adr.github.io)(ADRs).
 
-Some artifacts that can be generated after sessions are Architectural Decision Records (ADRs). Write an ADR is a good way to captures and registered the architectural decisions made along with its context and consequences. Some companies tracks theis architectural decisions in some plataform like Confluence or other wiki content management system, in order to recieve comments and feedback until be implemented. 
+Architecture Design Records are to capture the particular challenge, and the reasons why a particular decision was reached. It should also include other viable options considered as well as the impact and tradeoff of the decision. ADRs are designed to be iterable, meaning that designs and decisions can be changed if situations or new findings appear. This is done by adding to the collection of ADRs and reflect the change.
 
-If any wiki content management system is not available, a good approach is to add to the repository as a [Markdown Architectural Decision Records](https://adr.github.io/madr). This approach is known as Lightweight Architecture Decision Records which is recommended to store all details in source control. To publish some plugins can be used like [Log4brains](https://github.com/thomvaill/log4brains). It enables you to log Architecture Decision Records (ADR) right from your IDE and to publish them automatically as a static website.
-
-Xp & Microsoft registered all ADRs in Confluence -- tool used in Xp for sharing techincal content -- following this [template](./adr-template.md)
+Because Architecture Design Records is a community-backed initiative, there is good community support on its tooling. [Markdown ADR (madr)](https://adr.github.io/madr) provides a definitive template for the document. There are even tools such as [Log4brains](https://github.com/thomvaill/log4brains) that allows for statically generated websites built on madr.
 
 ### MonoRepo
 
-Our team decided on using a [monorepo](https://en.wikipedia.org/wiki/Monorepo) for development. We found this efficient as we were able to navigate between projects and view patterns / documentation. It improved collaboration between the workstreams.
+There is fierce debate within the development community around MonoRepos. We found MonoRepos helpful for projects as it helps with collaboration, and enables team members to jump between different workstreams. The design around MonoRepos requires more effort as the project can grow quickly and become unwieldy. We were intentional on the file structure to ensure that there is minimal effort for a team to break off of the monorepo and create a separate repo. We achieved this by encapsulate all aspects of a particular application into its own directory, shown below:
 
-(TODO: can someone add more here? I'm grasping at straws.)
+```tree
+/(project)
+|  /docs
+|  /infrastructure
+|  |  /pipelines
+|  |  /iac
+|  /apps
+|  |  /app-a
+|  |  |  /cicd
+|  |  |  /docs
+|  |  |  /tests
+|  |  |  /src
+|  |  /app-b  
+|  |  |  /cicd  
+|  |  |  /docs
+|  |  |  /tests
+|  |  |  /src
+```
 
 ### Code-With
 
-An important statement we made at the outset of this project was we are ONE team, working together towards a common goal. People working for different companies on one project can sabotage this intent. Where this project succeeded in that intent where others have failed, is due BOTH companies giving the project members dedicated time to focus. There was no split attention, no competing agendas. As a single project team from disparate companies, we were able to devote 100% of our energy to making our milestone. Every member of the team brought their unique knowledge and abilities to bear on their work items and we leveraged pairing to ensure cross pollination of knowledge.
+An important statement we made at the outset of this project was that the teams from the two companies operation as ONE team, working together towards a common goal. As a single project team from disparate companies, we were able to devote 100% of our energy to achieving our project milestone. Every member of the team brought their unique knowledge and abilities to bear on their work items and we leveraged pairing to ensure cross pollination of knowledge.
 
 ### Workstreams
 
@@ -84,15 +101,13 @@ i.e. [API] Learned this cool thing about Helm charts!
 
 ### End of Sprint Demos
 
-We scheduled weekly sprint demos to showcase our work to each other (the different workstreams) but also to stakeholders outside of the project team. The XP cloud team and management attended demos when they could and also we recorded them all for anyone to view at their own convenience. We time-boxed our demo meetings to 30 minutes long and with 4 workstreams, alloted 7 minutes per workstream demo. 
+We scheduled weekly sprint demos to showcase our work to each other (the different workstreams) but also to stakeholders outside of the project team. The XP cloud team and management attended demos when they could and also we recorded them all for anyone to view at their own convenience. We time-boxed our demo meetings to 30 minutes long and with 4 workstreams, alloted 7 minutes per workstream demo.
 
 ### Informed Captain
 
 The informed captain is a transitory role empowered to gather all facts and opinions about a subject that requires a decision or direction, and is further empowered to make a decision for the team. (and to document that decision!) We assigned different informed captains for different decisions and rotated the feeling of responsibility.
 
 The informed captain can help with problems of analysis paralysis which can be bad with one person but when a group or committee tries to make a decision by consensus, this can take a prohibitively long time to achieve.
-
-### Document Everything
 
 ### Working Agreements
 
@@ -137,6 +152,10 @@ Benefits of this practice are:
 3. No one gets stuck in the "no one cares about my PRs" mentality
 
 ## Outcome
+
+## Conclusion
+
+The goal of this white paper is to outline and highlight some best practices utilized by a new, well-sized development team. This was a ideal project. We of course understand that every team is different and that no two teams are the same.
 
 ## References
 
