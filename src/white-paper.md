@@ -82,80 +82,85 @@ There is fierce debate within the development community around MonoRepos. We fou
 
 ### Code-With
 
-An important statement we made at the outset of this project was that the teams from the two companies operation as ONE team, working together towards a common goal. As a single project team from disparate companies, we were able to devote 100% of our energy to achieving our project milestone. Every member of the team brought their unique knowledge and abilities to bear on their work items and we leveraged pairing to ensure cross pollination of knowledge.
+This engagement was a collaboration between Microsoft and XP. The notion of "Code-With" was at the center of this engagement, and empowered the engineers from both companies to engage fully. Code-With motion emphasizes that development expertise flow in both direction, back and forth between the two companies. This notion asks engineers to pair program, and be comfortable to present the incremental work they done on a daily or weekly basis. It is counter-intuitive to think that taking time to teach or having two engineers work on one task would increase Developer Velocity, but the positive effect is immediate.
 
 ### Workstreams
 
-We identified the following workstreams:
+Creating XP's next-generation data platform is no small feat. Given the large of engineers we had on the project, we decided to have multiple workstreams on this engagement. The goal of the workstreams is to provide smaller scopes for engineers to have a focus within a sprint.
+
+To serve as an example, we identified the following workstreams for this engagement:
 
 * DevOps
 * API
 * Transformation
 * Streaming
 
-With these workstreams, we identified small v-teams of engineers. A best practice we used for code-with, was that every v-team had a good mix of people from both companies, working together to complete the definition of done and success criteria for user stories assigned to their workstream. Engineers were not pigeonholed to a single workstream and there was freedom to move between workstreams as tasks completed. Some people preferred to stay in a workstream for the duration and that was also acceptable.
+With the workstreams identified, we ask the engineers from both companies to self-organize with the following guideline:
 
-One issue we discovered with the workstreams during a sprint retrospective, was that workstreams were becoming siloed and information that might be useful outside of the workstream wasn't shared. We mitigated this by proactively sharing knowledge in our Teams channel and prefixing the subject with [workstream].
+* Each workstream needs a Workstream Lead. Ideally this is someone who has enough knowledge or context.
+* Each workstream needs to have at least one engineer from both companies.
+* All workstreams should be roughly the same size (number of engineers).
 
-i.e. [API] Learned this cool thing about Helm charts!
+Self organization gives the engineers the autonomy to work with the technology they want.Engineers were not restricted to a single workstream and had the freedom to move between workstreams between sprints. Some people preferred to stay in a workstream for the duration and that was also acceptable.
 
 ### End of Sprint Demos
 
-We scheduled weekly sprint demos to showcase our work to each other (the different workstreams) but also to stakeholders outside of the project team. The XP cloud team and management attended demos when they could and also we recorded them all for anyone to view at their own convenience. We time-boxed our demo meetings to 30 minutes long and with 4 workstreams, alloted 7 minutes per workstream demo.
+Because this engagement had a relatively short execution window, our sprints were one-week sprints. End-of-sprint demos are to showcase our work to one another and to the main stakeholders. The demo sessions also are all recorded to maximize the audience. The goal of the end of sprint demos is ultimately to celebrate the work that the team accomplished that sprint, and also to gather feedback and share ownership with the stackholders.
 
-### Informed Captain
+### Informed Captains and Decision Making
 
-The informed captain is a transitory role empowered to gather all facts and opinions about a subject that requires a decision or direction, and is further empowered to make a decision for the team. (and to document that decision!) We assigned different informed captains for different decisions and rotated the feeling of responsibility.
+Informed Captains is another core idea from [Netflix's Culture Page](https://jobs.netflix.com/culture#informed-captains). An informed captain's job is to make a particular decision. This eliminates "design by committee". This person is empowered to gather all facts and opinions about a subject that requires a decision. The important element of gathering opinions is to emphasize on gathering as much differing opinions as possible; this encourages people who might initially be hesitant to voice an opinion that is different than the majority opinion. We assigned different informed captains for different decisions and rotated the feeling of responsibility.
 
-The informed captain can help with problems of analysis paralysis which can be bad with one person but when a group or committee tries to make a decision by consensus, this can take a prohibitively long time to achieve.
+For most decisions that requires a designated Informed Captain, the decision making process is as follows:
+
+1. Problem Statement - During a standup, the Informed Captain presents the decision point that needs to be made. (I.e. Given our architecture, what message broker should we use?). The problem statement is then posted on the General Teams channel for record keeping and to maximize visibility.
+2. Gathering Phase - This can be a meeting and/or a Teams thread. The Informed Captain gathers as much opinion and facts as possible.
+3. Proposal Phase - Informed Captain makes a proposal to the team on Teams, outlining the decision as well as the reason why the direction was chosen. The team is able to respond to the proposal by having dissenting opinions by highlighting the disadvantage to the approach.
+4. Finalize Phase - Informed Captain makes the final decision by taking into account the dissenting opinions, then communicate the decision on Teams.
+5. Documentation Phase - Informed Captain documents the decision in the form of an Architecture Decision Record.
 
 ### Working Agreements
 
-Our working agreement defined HOW we worked together and comprised of 5 main sections:
+The goal of an working agreement is to provide absolute clarity on how the team will work together. For this engagement, the working agreement comprised of 5 main sections:
 
 * Collaboration
-* Communication norms
+* Communication Norms
 * Code management [contributing guidelines](./CONTRIBUTING.md)
-* Definition of done
+* Definition of Done
 * Norms for reviewing and submitting pull requests
 
-Often these norms or practices are not written down. Eliminating assumptions makes working together more frictionless.
-Communication norms contained items like:
+Often these norms or practices are not written down, by being explicit, eliminates assumptions from engineers and stakeholders and forms healthy expectations from the rest of the team.
+
+As an example, communication norms contained items like:
 
 * WHEN core working hours for the project - our team spread across 4 time zones
-* WHERE our communications happen (Teams - not email, channels - not chat)
-* WHAT our communication was (async, meetings should begin / end on time, should contain an agenda)
-* HOW User stories broken down to small tasks, keeping pull requests small and manageably-sized
+* WHERE our communications happen (ie. Teams - not email, channels - not chat)
+* WHAT our communication etiquette were (ie. prefer async, meetings should begin/end on time, should contain an agenda)
+* HOW User stories should be composed (ie. feature-centric, can be implemented with code or demonstrable)
 
 ### PRolice
 
-Many software projects have problems with pull requests. Problems like:
+PR reviews is usually an ambiguous process. Situations like these often come up:
 
-1. Pile ups - sudden large backlog of PRs
+1. Pile ups - sudden large backlog of PRs waiting to be reviewed
 2. Stuck PRs - engineers disagreeing and gridlocking PRs
-3. Large PRs - PRs that try to solve the problems of the universe in one PR and touch 100's of files
+3. Large PRs - PRs that try to implement multiple tasks in one PR and touch a large number of files
 
-Our working agreement helped solve #3 - our PRs for this project remained small and manageable. The rest? Solved by the PRolice!
+We solved first two situations with a role call the "PR Police" or "PRolice", and the third is mitigated with the "Code management" section of the working agreement.
 
-What is the PRolice?
+The PRolice is a person (rotated by Sprint) that monitors the PRs and individually notifies people to review them. If a PR isn't approved in a day or more, the PRolice will investigate the reason. If a PR is stuck, the PRolice facilitates the conversation and strives for a resolution. If there is a pile up of PRs, PRolice actively calls out reviewers to review these PRs. After implementing the PRolice (and small tasks), we didn't have any PRs that spanned across the day boundary.
 
-The PRolice is a rotating person (rotated by Sprint) that monitors the PRs and tags people to review them. If a PR isn't approved in a day or more, the PRolice will investigate the reason. Is it stuck? Is it waiting on changes? Are people disagreeing? The PRolice facilitates the approval (i.e. nag submitter about making their changes, schedule a meeting with disagreeing engineers and go through the PR together in the meeting.)
+> Note: The PRolice is a person. We find automated notifications are impersonal and often get ignored by engineers. Also important to note that this role should be rotated regularly.
 
-After implementing the PRolice (and small tasks), we didn't have any PRs that spanned across the day boundary.
+Benefits of having a PRolice are:
 
-The key is to rotate the role - no one wants to be PRolice forever.
-
-Benefits of this practice are:
-
-1. Higher morale
-2. Higher velocity
+1. Higher morale - as every one is actively reviewing other's PRs instead of just one or two people who are used to reviewing PRs
+2. Higher velocity - as PRs are merged more efficiently
 3. No one gets stuck in the "no one cares about my PRs" mentality
-
-## Outcome
 
 ## Conclusion
 
-The goal of this white paper is to outline and highlight some best practices utilized by a new, well-sized development team. This was a ideal project. We of course understand that every team is different and that no two teams are the same.
+The goal of this white paper is to outline and highlight some best practices that both fosters a culture of collaboration and improves an organization's Developer Velocity. Of course, every team is different and every company is facing different challenges. We hope this paper provides some useful practice that you find helpful for your organization.
 
 ## References
 
