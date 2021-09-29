@@ -57,56 +57,6 @@ Architecture Design Records are to capture the particular challenge, and the rea
 
 Because Architecture Design Records is a community-backed initiative, there is good community support on its tooling. [Markdown ADR (madr)](https://adr.github.io/madr) provides a definitive template for the document. There are even tools such as [Log4brains](https://github.com/thomvaill/log4brains) that allows for statically generated websites built on madr.
 
-### MonoRepo
-
-There is fierce debate within the development community around MonoRepos. We found MonoRepos helpful for projects as it helps with collaboration, and enables team members to jump between different workstreams. The design around MonoRepos requires more effort as the project can grow quickly and become unwieldy. We were intentional on the file structure to ensure that there is minimal effort for a team to break off of the monorepo and create a separate repo. We achieved this by encapsulate all aspects of a particular application into its own directory, shown below:
-
-```tree
-/(project)
-|  /docs
-|  /infrastructure
-|  |  /pipelines
-|  |  /iac
-|  /apps
-|  |  /app-a
-|  |  |  /cicd
-|  |  |  /docs
-|  |  |  /tests
-|  |  |  /src
-|  |  /app-b  
-|  |  |  /cicd  
-|  |  |  /docs
-|  |  |  /tests
-|  |  |  /src
-```
-
-### Code-With
-
-This engagement was a collaboration between Microsoft and XP. The notion of "Code-With" was at the center of this engagement, and empowered the engineers from both companies to engage fully. Code-With motion emphasizes that development expertise flow in both direction, back and forth between the two companies. This notion asks engineers to pair program, and be comfortable to present the incremental work they done on a daily or weekly basis. It is counter-intuitive to think that taking time to teach or having two engineers work on one task would increase Developer Velocity, but the positive effect is immediate.
-
-### Workstreams
-
-Creating XP's next-generation data platform is no small feat. Given the large of engineers we had on the project, we decided to have multiple workstreams on this engagement. The goal of the workstreams is to provide smaller scopes for engineers to have a focus within a sprint.
-
-To serve as an example, we identified the following workstreams for this engagement:
-
-* DevOps
-* API
-* Transformation
-* Streaming
-
-With the workstreams identified, we ask the engineers from both companies to self-organize with the following guideline:
-
-* Each workstream needs a Workstream Lead. Ideally this is someone who has enough knowledge or context.
-* Each workstream needs to have at least one engineer from both companies.
-* All workstreams should be roughly the same size (number of engineers).
-
-Self organization gives the engineers the autonomy to work with the technology they want.Engineers were not restricted to a single workstream and had the freedom to move between workstreams between sprints. Some people preferred to stay in a workstream for the duration and that was also acceptable.
-
-### End of Sprint Demos
-
-Because this engagement had a relatively short execution window, our sprints were one-week sprints. End-of-sprint demos are to showcase our work to one another and to the main stakeholders. The demo sessions also are all recorded to maximize the audience. The goal of the end of sprint demos is ultimately to celebrate the work that the team accomplished that sprint, and also to gather feedback and share ownership with the stackholders.
-
 ### Informed Captains and Decision Making
 
 Informed Captains is another core idea from [Netflix's Culture Page](https://jobs.netflix.com/culture#informed-captains). An informed captain's job is to make a particular decision. This eliminates "design by committee". This person is empowered to gather all facts and opinions about a subject that requires a decision. The important element of gathering opinions is to emphasize on gathering as much differing opinions as possible; this encourages people who might initially be hesitant to voice an opinion that is different than the majority opinion. We assigned different informed captains for different decisions and rotated the feeling of responsibility.
@@ -138,6 +88,52 @@ As an example, communication norms contained items like:
 * WHAT our communication etiquette were (ie. prefer async, meetings should begin/end on time, should contain an agenda)
 * HOW User stories should be composed (ie. feature-centric, can be implemented with code or demonstrable)
 
+### Code-With
+
+This engagement was a collaboration between Microsoft and XP. The notion of "Code-With" was at the center of this engagement, and empowered the engineers from both companies to engage fully. Code-With motion emphasizes that development expertise flow in both direction, back and forth between the two companies. This notion asks engineers to pair program, and be comfortable to present the incremental work they done on a daily or weekly basis. It is counter-intuitive to think that taking time to teach or having two engineers work on one task would increase Developer Velocity, but the positive effect is immediate.
+
+### Workstreams
+
+Creating XP's next-generation data platform is no small feat. Given the large of engineers we had on the project, we decided to have multiple workstreams on this engagement. The goal of the workstreams is to provide smaller scopes for engineers to have a focus within a sprint.
+
+To serve as an example, we identified the following workstreams for this engagement:
+
+* DevOps
+* API
+* Transformation
+* Streaming
+
+With the workstreams identified, we ask the engineers from both companies to self-organize with the following guideline:
+
+* Each workstream needs a Workstream Lead. Ideally this is someone who has enough knowledge or context.
+* Each workstream needs to have at least one engineer from both companies.
+* All workstreams should be roughly the same size (number of engineers).
+
+Self organization gives the engineers the autonomy to work with the technology they want.Engineers were not restricted to a single workstream and had the freedom to move between workstreams between sprints. Some people preferred to stay in a workstream for the duration and that was also acceptable.
+
+### MonoRepo
+
+There is fierce debate within the development community around MonoRepos. We found MonoRepos helpful for projects as it helps with collaboration, and enables team members to jump between different workstreams. The design around MonoRepos requires more effort as the project can grow quickly and become unwieldy. We were intentional on the file structure to ensure that there is minimal effort for a team to break off of the monorepo and create a separate repo. We achieved this by encapsulate all aspects of a particular application into its own directory, shown below:
+
+```tree
+/(project)
+|  /docs
+|  /infrastructure
+|  |  /pipelines
+|  |  /iac
+|  /apps
+|  |  /app-a
+|  |  |  /cicd
+|  |  |  /docs
+|  |  |  /tests
+|  |  |  /src
+|  |  /app-b  
+|  |  |  /cicd  
+|  |  |  /docs
+|  |  |  /tests
+|  |  |  /src
+```
+
 ### PRolice
 
 PR reviews is usually an ambiguous process. Situations like these often come up:
@@ -157,6 +153,10 @@ Benefits of having a PRolice are:
 1. Higher morale - as every one is actively reviewing other's PRs instead of just one or two people who are used to reviewing PRs
 2. Higher velocity - as PRs are merged more efficiently
 3. No one gets stuck in the "no one cares about my PRs" mentality
+
+### End of Sprint Demos
+
+Because this engagement had a relatively short execution window, our sprints were one-week sprints. End-of-sprint demos are to showcase our work to one another and to the main stakeholders. The demo sessions also are all recorded to maximize the audience. The goal of the end of sprint demos is ultimately to celebrate the work that the team accomplished that sprint, and also to gather feedback and share ownership with the stackholders.
 
 ## Conclusion
 
