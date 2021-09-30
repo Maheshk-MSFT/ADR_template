@@ -53,7 +53,7 @@ Forming a vision together allows the everyone on the team to have a shared owner
 
 Architecture Design Sessions (ADS) are designed to guide the participants through a series of design discussions. During the design sessions, participants can break into smaller groups to answer certain architecture questions and conduct investigations on the viability of certain ideas. These groups can then make recommendations on certain approaches. At the end of the ADS, the result is a detailed architecture diagram that specifies the initial design of the architecture. Accompanying the architecture diagram should be a collection of [Architecture Decision Records](https://adr.github.io)(ADRs).
 
-Architecture Design Records are to capture the particular challenge, and the reasons why a particular decision was reached. It should also include other viable options considered as well as the impact and tradeoff of the decision. ADRs are designed to be iterable, meaning that designs and decisions can be changed if situations or new findings appear. This is done by adding to the collection of ADRs and reflect the change.
+Architecture Design Records are to capture the particular challenge, and the reasons why a particular decision was reached. It should also include other viable options considered as well as the impact and tradeoff of the decision. ADRs are designed to be iterable, meaning that designs and decisions can be changed if situations or new findings appear. This is done by adding to the collection of ADRs and reflect the change. You can find an example of an ADR at the end of this paper.
 
 Because Architecture Design Records is a community-backed initiative, there is good community support on its tooling. [Markdown ADR (madr)](https://adr.github.io/madr) provides a definitive template for the document. There are even tools such as [Log4brains](https://github.com/thomvaill/log4brains) that allows for statically generated websites built on madr.
 
@@ -75,11 +75,11 @@ The goal of an working agreement is to provide absolute clarity on how the team 
 
 * Collaboration
 * Communication Norms
-* Code management [contributing guidelines](./CONTRIBUTING.md)
+* Code management
 * Definition of Done
 * Norms for reviewing and submitting pull requests
 
-Often these norms or practices are not written down, by being explicit, eliminates assumptions from engineers and stakeholders and forms healthy expectations from the rest of the team.
+Often these norms or practices are not written down, by being explicit, the agreement eliminates assumptions from engineers and stakeholders and forms healthy expectations from the rest of the team.
 
 As an example, communication norms contained items like:
 
@@ -87,6 +87,8 @@ As an example, communication norms contained items like:
 * WHERE our communications happen (ie. Teams - not email, channels - not chat)
 * WHAT our communication etiquette were (ie. prefer async, meetings should begin/end on time, should contain an agenda)
 * HOW User stories should be composed (ie. feature-centric, can be implemented with code or demonstrable)
+
+You can find an example of a working agreement at the end of this paper.
 
 ### Code-With
 
@@ -166,5 +168,7 @@ The goal of this white paper is to outline and highlight some best practices tha
 
 * ["Developer Velocity" by McKinsey](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance)
 * [Work Agreement Template](./work-agreement-template.md)
+* [ADR Example](./adr-template.md)
+* [CONTRIBUTING guidelines](./CONTRIBUTING.md)
 * [Architecture Design Sessions](https://www.linkedin.com/pulse/architecture-design-session-ads-vs-business-ideation-junco-boquer/)
 * [Lightweight Architecture Decision Records](https://www.thoughtworks.com/pt/radar/techniques/lightweight-architecture-decision-records)

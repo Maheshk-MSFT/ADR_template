@@ -1,32 +1,35 @@
 # **PBD - ADR001 - Title**
-- Status: PROPOSED | CONCLUDED | 
-- Deciders: <name>
-- Last updated on: <date>
 
-Technical Story: <link story>
+- Status: PROPOSED
+- Deciders: `<name>`
+- Last updated on: `<date>`
 
-- [Context and Problem Statement](#PBD-ADR002-Ingestiondataplatformarchitecture-ContextandProblemStatement)
-- [Decision Drivers](#PBD-ADR002-Ingestiondataplatformarchitecture-DecisionDrivers)
-- [Considered Options](#PBD-ADR002-Ingestiondataplatformarchitecture-ConsideredOptions)
-- [Decision Outcome](#PBD-ADR002-Ingestiondataplatformarchitecture-DecisionOutcome) 
-  - [Positive Consequences](#PBD-ADR002-Ingestiondataplatformarchitecture-PositiveConsequences)
-  - [Negative Consequences](#PBD-ADR002-Ingestiondataplatformarchitecture-NegativeConsequences)
-- [Pros and Cons of the Options](#PBD-ADR002-Ingestiondataplatformarchitecture-ProsandConsoftheOptions) 
-  - [Lambda architecture](#PBD-ADR002-Ingestiondataplatformarchitecture-Lambdaarchitecture)
-  - [Kappa architecture](#PBD-ADR002-Ingestiondataplatformarchitecture-Kappaarchitecture)
-  - [Liquid](#PBD-ADR002-Ingestiondataplatformarchitecture-Liquid)
-  - [SMACK](#PBD-ADR002-Ingestiondataplatformarchitecture-SMACK)
-  - [No up-front architectural pattern](#PBD-ADR002-Ingestiondataplatformarchitecture-Noup-frontarchitecturalpattern)
-- [Links](#PBD-ADR002-Ingestiondataplatformarchitecture-Links)
+Technical Story: `<link story>`
+
+- [Context and Problem Statement](#context-and-problem-statement)
+- [Decision Drivers](#decision-drivers)
+- [Considered Options](#considered-options)
+- [Decision Outcome](#decision-outcome)
+  - [Positive Consequences](#positive-consequences)
+  - [Negative Consequences](#negative-consequences)
+- [Pros and Cons of the Options](#pros-and-cons-of-the-options)
+  - [Lambda architecture](#lambda-architecture)
+  - [Kappa architecture](#kappa-architecture)
+  - [Liquid](#liquid)
+  - [SMACK](#smack)
+  - [No up-front architectural pattern](#no-up-front-architectural-pattern)
+- [Links](#links)
 
 ## **Context and Problem Statement**
+
 Your current platform to ingest company data and provide refined data to Data Analysts and Data Scientists was born as a proof of concept that became early adopted in production by Data Engineers. Apart of different operational issues, it lacks an envisioned architecture to drive implementation decisions.
 
 In order to provide a better platform to the company, which fits its needs in terms of reliability, scalability, security and ease to use, we need to consider all possible architecture archetypes of a big data ingestion and processing platforms.
 
 ## **Decision Drivers**
+
 - Enable fast data ingestion
-- Enable fast data access 
+- Enable fast data access
 - Enable different strategies for data processing and aggregating
 - Ease to extend
 - Minimize costs
@@ -36,6 +39,7 @@ In order to provide a better platform to the company, which fits its needs in te
 - Allow different data sources
 
 ## **Considered Options**
+
 Following the conventions described in [1], we’ll consider the following options:
 
 - Lambda architecture
@@ -45,6 +49,7 @@ Following the conventions described in [1], we’ll consider the following optio
 - No up-front architectural pattern
 
 ## **Decision Outcome**
+
 - Chosen option: **Kappa architecture**
 
 We understand Kappa architecture might fit best our need based on the movement towards restricting direct access to product teams databases, ruling out Lambda as a viable option. The new architecture should follow design rules of an evolutionary architecture but we understand it’s important to have a well defined direction for it instead of open the possibility of ad hoc decisions provided by no up-front architectural pattern.
@@ -55,10 +60,10 @@ Liquid architecture might be an option in the future but that would require a tw
 
 Although SMACK provide us a starting point in terms of implementation, we don’t need its stack is the best one to fit our needs. Also, we’re considering the data analysis as part of our data consumers concerns and outside on our data platform scope.
 
-
 ### **Positive Consequences**
+
 - Moving the company towards an event-driven architecture
-- Centralising data input
+- Centralizing data input
   - Enabling pipeline for automatic data anonymization
 - Reducing the time ingested data lands into our Data Lake for those currently using batch jobs
 - Keeping the same high level abstractions used for those jobs using streaming
@@ -66,6 +71,7 @@ Although SMACK provide us a starting point in terms of implementation, we don’
 - Enabling data product teams to focus on the processing routines needed to extract value from data rather than spend time on data ingest processes
 
 ### **Negative Consequences**
+
 - Product teams might require help on develop change data capture strategies to publish their data into our new platform
 - Platform should support all different data sources
 - We might need to reconsider estimates around usages on our event hub cluster since throughput will increase
@@ -75,7 +81,8 @@ Although SMACK provide us a starting point in terms of implementation, we don’
 ## **Pros and Cons of the Options**
 
 ### **Lambda architecture**
-The Lambda architecture is organised into three different layers: batch, speed and serving layers.
+
+The Lambda architecture is organized into three different layers: batch, speed and serving layers.
 
 - Good, because it doesn’t change much the abstractions our users already have
 - Good, because it put less effort in terms of changes for our platform users in their own domain
@@ -87,6 +94,7 @@ The Lambda architecture is organised into three different layers: batch, speed a
 - Bad, because it might lead to more costs, if batch and streaming data needs to be stored into different databases in the Data Lake
 
 ### **Kappa architecture**
+
 The Kappa architecture merges the batch and speed layers into a single one.
 
 - Good, because there’s a single source of data into the platform as every scenario is treated as stream of events, leading to less complexity
@@ -97,6 +105,7 @@ The Kappa architecture merges the batch and speed layers into a single one.
 - Bad, because the overall architecture is more complex dealing with asynchronous events
 
 ### **Liquid**
+
 The Liquid architecture uses two layers - processing and messaging - using the messaging layer for both ingest data from sources and providing data for the Big Data applications.
 
 - Good, because there’s a single source of data into the platform as every scenario is treated as stream of events, leading to less complexity
@@ -110,6 +119,7 @@ The Liquid architecture uses two layers - processing and messaging - using the m
 - Bad, because it might uses more storage space, since it doesn’t relies in a single copy of the data (every data is moved around in different topics, depending on the use cases)
 
 ### **SMACK**
+
 "The acronym SMACK stands for the frameworks Apache Spark, Apache Mesos, Akka, Apache Cassandra and Apache Kafka" [1]
 
 - Good, because process data in real time
@@ -120,12 +130,14 @@ The Liquid architecture uses two layers - processing and messaging - using the m
 - Bad, because can introduce more complexity in terms on using the platform which heavily relies in advanced concurrency concepts
 
 ### **No up-front architectural pattern**
+
 - Good, because it’s the simplest solution at this moment
 - Good, because it permits postpone the discussion and evolve the architecture as we learn more about requirements
 - Bad, because it doesn’t enforce a clear path for all users of our platform
 - Bad, because it can lead to several strategies to ingest and process data, requiring major refactors on teams without bandwidth to absorb that effort
 
 ## **Links**
+
 1. Big Data architecture patterns
    [HORGAS, Tim. ”Benchmarking of Big Data Architecture Trade-Offs”. 2016.](https://users.informatik.haw-hamburg.de/~ubicomp/projekte/master2016-hsem/horgas/bericht.pdf)
 1. <https://www.oreilly.com/radar/questioning-the-lambda-architecture/>
