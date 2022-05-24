@@ -11,11 +11,11 @@ We work as a team, there are no separate `Team A` or `Team B` specific goals, we
 ## Principle 2: Collaboration is the norm
 
 Collaboration hours
-`Capture the team members time zone and the work hours`
-US West	9am – 1pm
-US Central	11am – 3pm
-US East	12pm – 4pm
-Brazil	1pm – 5pm
+`Capture the team members time zone and the work hours`  
+US West	9am – 1pm  
+US Central	11am – 3pm  
+US East	12pm – 4pm  
+Brazil	1pm – 5pm  
 
 Because of team member time zone spread in the East / Central/ West US regions and Brazil, please bias all critical communication / meetings to collaboration hours.
 
